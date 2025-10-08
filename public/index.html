@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Grapevine Wikimedia Search</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #760086;
+    color: #e6edf3;
+  }
+  .container {
+    max-width: 900px;
+    margin: 60px auto;
+    background-color: #4d0063;
+    border-radius: 14px;
+    padding: 20px 30px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.8);
+  }
+  h1 { text-align: center; color: #fff; }
+  input {
+    width: 100%;
+    padding: 10px;
+    background-color: #250038;
+    border: 1px solid #4d0063;
+    color: #fff;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  button {
+    background-color: #794397;
+    border: none;
+    color: #fff;
+    padding: 10px 16px;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+  button:hover { background-color: #760086; }
+  .controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  label { font-size: 14px; }
+  .results {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+  }
+  .card {
+    background-color: #250038;
+    border-radius: 10px;
+    border: 1px solid #4d0063;
+    overflow: hidden;
+    text-align: center;
+  }
+  .card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+  }
+  .card a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 8px;
+  }
+  .card a:hover { color: #a38eb1; }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>🖼 Grapevine Wikimedia Search</h1>
+  <div class="controls">
+    <input type="text" id="search" placeholder="Search images...">
+    <button onclick="searchImages()">Search</button>
+    <label>
+      <input type="checkbox" id="safe" checked>
+      Safe Search
+    </label>
+  </div>
+  <div id="results" class="results"></div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
